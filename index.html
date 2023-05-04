@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Experiance</title>
+<link rel="stylesheet" href="./CSS/style.css">
+<link rel="stylesheet" href="./icon/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>	
+
+<!-- <div class="section"> -->
+	<div class="send_btn">
+		<button type="button"class="SendButton" id="send">Send</button>
+		<button type="button"class="SendButton" id="send">Send</button>
+		<button type="button"class="SendButton" id="send">Send</button>
+		<button type="button"class="SendButton" id="send">Send</button>
+	</div>
+	<div class="visible_div">
+	<div class="transparent_bg_empty" id="hide"></div>
+	<div class="model_box" id="model_box">	
+		<div class="canceldiv">
+			<h3>Cancel</h3>
+			<button type="button" class="cancelButton" id="cancelButton"><i class="fa fa-times" aria-hidden="true"></i></button>
+		</div>
+	</div>
+	</div>
+	
+	
+<!-- </div> -->
+
+<script>
+	let sendbtn = document.querySelectorAll(".SendButton");
+	let box = document.getElementById("model_box");
+	let hide_bg = document.getElementById("hide");
+	let cancel = document.getElementById("cancelButton");
+
+	
+	
+	for(let x=0; x < sendbtn.length; x++ ){
+		sendbtn[x].addEventListener("click",function(event){
+		hide_bg.classList.add("visible");
+		box.classList.add("visible");
+	});
+		}
+	cancel.addEventListener("click",function(event){
+		hide_bg.classList.remove("visible");
+		box.classList.remove("visible");
+	});
+	
+
+</script>
+
+</body>
+</html>
